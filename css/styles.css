@@ -1,71 +1,278 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Geral */
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
 }
 
+/* Geral */
 body {
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
+    background-color: #f7f7f7;
 }
 
-header{
-    background-color: #37588d;
+header {
+    background-color: #3863b3;
+    padding: 16px 0;
+}
+
+header .container {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-around;
-    padding:24;
 }
 
-header h1{
+header h1 {
     color: #f2f2f2;
 }
 
-nav{
-    display:flex;
-    gap: 24px;
+nav {
+    display: flex;
 }
 
-nav a{
+nav a {
     text-decoration: none;
-    color:#c2c2c2;
+    color: #c2c2c2;
+    margin-right: 24px;
 }
 
-nav a:hover{
-    color:#f2f2f2;
+nav a:hover {
+    color: #f2f2f2;
 }
 
-.interface{
+.container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 100px;
+    padding: 0 24px;
 }
 
-
-/*Index*/
-.site-top{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 32px 0px;
+/* Index */
+.site-top {
+    text-align: center;
+    margin: 100px 0;
 }
 
-.courses{
+.site-top h1 {
+    font-size: 64px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color : #2960c7;
+}
+
+.courses {
     display: flex;
     flex-direction: column;
-    width:100%;
     gap: 32px;
     margin-bottom: 32px;
 }
 
-.course{
+.courses .courses-title {
+    color: #f2f2f2;
+    background-color: #3863b3;
+    padding: 12px;
+    border-radius: 12px 12px 0 0;
+}
+
+.courses .courses-title h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.course {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.course a{
+    color: #2960c7;
+    font-weight: 600;
+}
+
+.course a:hover{
+    text-decoration: underline;
+}
+
+.course h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+} 
+
+.course p {
+    color: #979797;
+    font-size: 16px;
+}
+/*Course Detail*/
+.course-editor{
+    margin: 24px 0;
+    padding: 24px;
+    background-color: #f2f2f2;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.24);
+}
+
+.course-editor label{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2960c7;
+}
+
+.course-editor input{
+    width: 100%;
+    height: 48px;
+    padding: 0 24px;
+    border: 1px solid lightgray;
+    border-radius: 12px;
+    outline: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+
+.course-editor textarea{
+    width: 100%;
+    height: 120px;
+    padding: 12px 24px;
+    border: 1px solid lightgray;
+    border-radius: 12px;
+    outline: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+
+
+.course-editor button{
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 12px;
+    background-color: #2960c7;
+    color: #f2f2f2;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
 
 }
 
+.course-editor button:hover{
+    background-color: #1e4e9b;
+}
+
+.import-students{
+    margin: 24px 0;
+    padding: 24px;
+    background-color: #f2f2f2;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.24);
+
+}
+
+/*imput file css*/
+.import-students input[type="file"] {
+    display: none;
+}
+
+.import-students label {
+    display: block;
+    width: 100%;
+    height: 48px;
+    border: 1px solid #2960c7;
+    border-radius: 12px;
+    background-color: #f2f2f2;
+    color: #2960c7;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    line-height: 48px;
+    margin-bottom: 12px;
+}
+
+.import-students label:hover {
+    background-color: #6d8fce;
+    color: #f2f2f2;
+}
+
+.import-students button {
+    background-color: #2960c7;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.import-students button:hover {
+    background-color: #1e4e9b;
+}
+
+
+.import-students button{
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 12px;
+    background-color: #2960c7;
+    color: #f2f2f2;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+
+.enrolled-students{
+    margin: 24px 0;
+    padding: 24px;
+    background-color: #f2f2f2;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.24);
+}
+
+.enrolled-students h2{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #2960c7;
+}
+.enrolled-students table{
+    width: 100%;
+}
+
+.enrolled-students table thead {
+    background-color: #1e4e9b;
+    color: #f2f2f2;
+}
+
+.enrolled-students table th {
+    padding: 6px;
+    border-radius: 12px;
+}
+
+.enrolled-students table td {
+    background-color: #f2f2f2;
+    padding: 6px;
+    text-align: center;
+}
+
+.enrolled-students table td:nth-child(4) {
+    color: green;
+}
+
+.enrolled-students table td:nth-child(5) {
+    color: red;
+}
 
 /* Login Page */
 .login-container {
