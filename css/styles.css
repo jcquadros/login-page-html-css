@@ -1,15 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Geral */
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
-    
+    height: 100vh;
 }
 
+header{
+    background-color: #37588d;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding:24;
+}
+
+header h1{
+    color: #f2f2f2;
+}
+
+nav{
+    display:flex;
+    gap: 24px;
+}
+
+nav a{
+    text-decoration: none;
+    color:#c2c2c2;
+}
+
+nav a:hover{
+    color:#f2f2f2;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+
+/*Index*/
+.site-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 32px 0px;
+}
+
+.courses{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.course{
+
+}
+
+
+/* Login Page */
 .login-container {
     display: flex;
     justify-content: center;
@@ -18,7 +76,6 @@ body {
     background-image: linear-gradient( 136deg,rgb(149,153,226) 0%,rgb(139,198,236) 100%);
 }
 
-/* Login Page */
 .login-box {
     max-width: 400px;
     width: 100%;
@@ -188,23 +245,4 @@ body {
 
 .register-box .login-link a:hover {
     text-decoration: underline;
-}
-
-/* Home Page */
-.main-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f2f2f2;
-}
-
-.courses {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    width: 75%;
 }
